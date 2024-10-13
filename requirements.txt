@@ -1,0 +1,6 @@
+python==3.10.14
+streamlit==1.39.0
+langchain-core==0.3.10
+langchain==0.3.3
+langchain-community==0.3.2
+openai==1.51.2

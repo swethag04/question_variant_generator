@@ -9,14 +9,20 @@ def main():
     with st.sidebar:
         st.title("🤖 AI Assist for Educators")
         st.markdown(
-            """ This app is  built using:
+            """This app transforms your original quiz questions into 
+multiple variants with just a TSV file upload. 
+            This app is  built using:
 - [Streamlit](https://streamlit.io/) 
 - [OpenAI](https://openai.com/)
 - [Langchain](https://python.langchain.com/)
+             """  
+        st.text("")
+        st.write("Please enter your OpenAI API key")
+        OPENAI_API_KEY = st.text_input("OpenAI API Key", 
+                                   key="file_qa_api_key", 
+                                   type="password")       
 
-This app transforms your original quiz questions into 
-multiple variants with just a TSV file upload.
-             """       
+        "[View the source code of the app](https://github.com/swethag04/question_variant_generator)"
         )
 
     # File Uploader

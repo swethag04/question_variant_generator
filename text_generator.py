@@ -5,9 +5,7 @@ import pandas as pd # type: ignore
 import json
 import os
 
-OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
-
-def question_generator(df):
+def question_generator(df, OPENAI_API_KEY):
     template = """
         You are an expert question writer. 
         Given the following question, please generate two variants of the question that are 
@@ -22,7 +20,7 @@ def question_generator(df):
     template=template,)
 
     # Initialize the ChatOpenAI model for question generation
-    model = ChatOpenAI(temperature=0)
+    model = ChatOpenAI(temperature=0, api_key=OPENAI_API_KEY)
     chain = prompt | model
 
     variant1 =[]

@@ -15,7 +15,7 @@ multiple variants with just a TSV file upload.
 - [Streamlit](https://streamlit.io/) 
 - [OpenAI](https://openai.com/)
 - [Langchain](https://python.langchain.com/)
-             """  
+             """  )
         st.text("")
         st.write("Please enter your OpenAI API key")
         OPENAI_API_KEY = st.text_input("OpenAI API Key", 
@@ -23,7 +23,7 @@ multiple variants with just a TSV file upload.
                                    type="password")       
 
         "[View the source code of the app](https://github.com/swethag04/question_variant_generator)"
-        )
+        
 
     # File Uploader
     uploaded_file = st.file_uploader("Upload a TSV file with questions", type="tsv")

@@ -28,6 +28,9 @@ multiple variants with just a TSV file upload.
     # File Uploader
     uploaded_file = st.file_uploader("Upload a TSV file with questions", type="tsv")
 
+    if uploaded_file and not OPENAI_API_KEY:
+        st.info("Please enter your OpenAI API key in the sidebar to continue.")
+
     if uploaded_file is not None:
         # Read CSV
         df = pd.read_csv(uploaded_file, sep="\t")

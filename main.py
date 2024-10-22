@@ -20,7 +20,8 @@ multiple variants with just a TSV file upload.
         st.write("Please enter your OpenAI API key")
         OPENAI_API_KEY = st.text_input("OpenAI API Key", 
                                    key="file_qa_api_key", 
-                                   type="password")       
+                                   type="password")  
+        "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
 
         "[View the source code of the app](https://github.com/swethag04/question_variant_generator)"
         

@@ -37,7 +37,7 @@ multiple variants with just a TSV file upload.
         st.write(df)
 
         # Data Processing 
-        output = question_generator(df)
+        output = question_generator(df, OPENAI_API_KEY)
 
         # Display Processed Data
         st.subheader("Output with 2 variants of each question")
